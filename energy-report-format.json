@@ -1,15 +1,20 @@
 {
-	"formatVersion": "0.1",
-	"formatVersionSpecificationUri": null,
-	"reportId": "dc11bd2b-f7ea-4e31-8601-0ae102940b1a",
-	"reportDatetime": "2023-12-01 08:30:00",
-	"reportStatus": "draft|final",
-	"publisher": {
-		"name": null,
-		"division": null,
-		"location": null,
-		"projectName": null,
-		"confidentialityLevel": "public|internal|confidential|secret"
+	"header": {
+		"formatVersion": "0.1",
+		"formatVersionSpecificationUri": null,
+		"reportId": "dc11bd2b-f7ea-4e31-8601-0ae102940b1a",
+		"reportDatetime": "2023-12-01 08:30:00",
+		"reportStatus": "draft|final",
+		"publisher": {
+			"name": null,
+			"division": null,
+			"location": null,
+			"projectName": null,
+			"confidentialityLevel": "public|internal|confidential|secret",
+			"publicKey": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQCSFe5dQLBl+USwot9wrko1tYvipUnXKMDGQuxtghQKbYRVOFMMsIntTqYw6wqRqenHqC3aWUpPdv1JUls9Rf32T5Xqdu+yEshvyGwyo+gHfRynZSF4Qe3wSf8kXYJVLbM0jRDPCKManruppKXr+aqIW8JiD+wfDsvBGhM5ftUKzw=="
+		},
+		"contentHashAlgorithm": "RSA",
+		"contentHash": "7BBAD02FC4C657A2CC858CD4EA2EC751"
 	},
 	"dataTypes": {
 		"tabular": {
@@ -96,10 +101,13 @@
 			"ResNet50": {
 				"framework": "TensorFlow",
 				"frameworkVersion": "2.14.0",
-				"classPath": "tf.keras.applications.resnet50.ResNet50"
-			},
-			"hyperparameters": {
-				"key1": "value1"
+				"classPath": "tf.keras.applications.resnet50.ResNet50",
+				"hyperparameters": {
+					"key1": "value1"
+				},
+				"trainPercent": 0.7,
+				"validationPercent": 0.3,
+				"testPercent": 0.0
 			}
 		}
 	},
