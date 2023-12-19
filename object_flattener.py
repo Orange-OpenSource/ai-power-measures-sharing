@@ -4,6 +4,9 @@
 #################################
 #!/usr/bin/python
 
+import json
+import pandas as pd
+
 class AmbiguousColumnException(Exception):
 
     def __init__(self, column:str) -> None:
@@ -45,7 +48,7 @@ class ObjectFlattener(object):
 if __name__ == '__main__':
     of = ObjectFlattener(separator='_')
 
-    print('Test OK')
+    print('Test 1 - OK')
     print(str(of.flatten({
         'prop': 'value',
         'figure': 1,
@@ -59,17 +62,26 @@ if __name__ == '__main__':
         }
     })))
 
-    print('Test KO')
-    print(str(of.flatten({
-        'prop': 'value',
-        'figure': 1,
-        'empty': {},
-        'nested': {
-            'sub': 5,
-            'renested': {
-                'grandson': 'Hello World!',
-                'null': None
-            }
-        },
-        'nested_renested_grandson': 'ambiguous'
-    })))
+    print('Test 2 - KO')
+    try:
+        print(str(of.flatten({
+            'prop': 'value',
+            'figure': 1,
+            'empty': {},
+            'nested': {
+                'sub': 5,
+                'renested': {
+                    'grandson': 'Hello World!',
+                    'null': None
+                }
+            },
+            'nested_renested_grandson': 'ambiguous'
+        })))
+    except:
+        print('The dict has ambiguous columns. Failed to flatten.')
+
+    print('Test 3 - Complete conversion from json to csv')
+    o = json.load(open('energy-report-format.json'))
+    f = of.flatten(o)
+    df = pd.DataFrame([ f ])
+    df.to_csv('energy-report-format.csv', index=False, header=True)
