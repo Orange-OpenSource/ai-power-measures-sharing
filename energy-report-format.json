@@ -13,17 +13,17 @@
 	},
 	"dataTypes": {
 		"tabular": {
-			"active": true,
 			"fileType": "csv",
 			"volume": 80,
 			"volumeUnit": "megabyte",
 			"source": "private",
 			"sourceUri": null,
 			"items": 150000,
-			"itemsDimension": [ 60 ]
+			"itemsDimension": {
+				"1": 60
+			} 
 		},
 		"audio": {
-			"active": false,
 			"fileType": null,
 			"volume": 0,
 			"volumeUnit": null,
@@ -33,14 +33,16 @@
 			"itemsDimension": null
 		},
 		"image": {
-			"active": true,
 			"fileType": "jpeg",
 			"volume": 215,
 			"volumeUnit": "megabyte",
 			"source": "private",
 			"sourceUri": "https://www.kaggle.com/datasets/imsparsh/flowers-dataset/",
 			"items": 4500,
-			"itemsDimension": [ 256, 256 ]
+			"itemsDimension": {
+				"1": 256,
+				"2": 256
+			}
 		},
 		"video": {
 			"active": false,
@@ -67,25 +69,38 @@
 	"taskSubtype": "vectorization",
 	"measurementMethod": {
 		"software": {
-			"active": true,
-			"solution": "CodeCarbon|CarbonAI|PyJoules",
-			"solutionVersion": "2.3.2",
-			"measureUnit": "Wh",
-			"measureValue": 459
+			"CodeCarbon": {
+				"solutionFamily": "library",
+				"solutionVersion": "2.3.2",
+				"measureUnit": "Wh",
+				"measureValue": 459	
+			},
+			"CarbonAI": {
+				"solutionVersion": null,
+				"measureUnit": null,
+				"measureValue": null	
+			}
 		},
 		"hardware": {
-			"active": false,
-			"instrumentType": "WattMeter",
-			"instrumentManufacturer": null,
-			"instrumentModel": null,
-			"measureUnit": "Wh",
-			"measure": null
+			"PCE-PA6000": {
+				"instrumentFamily": "WattMeter",
+				"instrumentManufacturer": "PCE Instruments",
+				"eanCode": "4250348701152",
+				"measureUnit": "Wh",
+				"measure": null		
+			}
 		}
 	},
 	"taskContext": {
-		"algorithms": [],
-		"hyperparameters": {
-			"key1": "value1"
+		"algorithms": {
+			"ResNet50": {
+				"framework": "TensorFlow",
+				"frameworkVersion": "2.14.0",
+				"classPath": "tf.keras.applications.resnet50.ResNet50"
+			},
+			"hyperparameters": {
+				"key1": "value1"
+			}
 		}
 	},
 	"systemContext": {
