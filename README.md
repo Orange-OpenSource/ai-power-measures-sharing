@@ -2,9 +2,11 @@
 
 ## 1. Goal
 
-The goal described by this document is to setup a simple and resilient digital ecosystem, so as to gather homogeneous, well-formated, measures of energy consumption from an atomic software task in general and Machine Learning / Deep Learning / AI / GenAI tasks in particular.
+The goal described by this document is to setup a simple and resilient digital ecosystem, so as to gather homogeneous, well-formated measures of energy consumption from an atomic software task in general and Machine Learning / Deep Learning / AI / GenAI tasks in particular.
 
 The purpose thereby followed is to build a large, open, database of energy consumption of IT / AI tasks depending on data nature, algorithms, hardware, etc., in order to improve energy efficiency approaches based on empiric knowledge. 
+
+More concretely, this empiric knowledge may be used in applied research to improve frugal approaches in AI models grid search and avoid energy-intensive tasks.
 
 ## 2. Energy Measurement
 

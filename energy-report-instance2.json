@@ -3,44 +3,24 @@
 		"licensing": "Creative Commons 4.0",
 		"formatVersion": "0.1",
 		"formatVersionSpecificationUri": null,
-		"reportId": "uuid4-string",
+		"reportId": "7a2eaba8-03a7-4e2c-a484-4f3ce3fc3793",
 		"reportDatetime": "2023-12-01 08:30:00",
-		"reportStatus": "draft|final|corrective",
+		"reportStatus": "corrective",
 		"publisher": {
 			"name": null,
 			"division": null,
 			"location": null,
 			"projectName": null,
-			"confidentialityLevel": "public|internal|confidential|secret",
-			"publicKey": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQCSFe5dQLBl+USwot9wrko1tYvipUnXKMDGQuxtghQKbYRVOFMMsIntTqYw6wqRqenHqC3aWUpPdv1JUls9Rf32T5Xqdu+yEshvyGwyo+gHfRynZSF4Qe3wSf8kXYJVLbM0jRDPCKManruppKXr+aqIW8JiD+wfDsvBGhM5ftUKzw=="
+			"confidentialityLevel": "public",
+			"publicKey": null
 		}
 	},
 	"dataTypes": {
-		"tabular": {
-			"fileType": "csv",
-			"volume": 80,
-			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
-			"source": "public|private",
-			"sourceUri": null,
-			"items": 150000,
-			"itemsDimension": {
-				"1": 60
-			} 
-		},
-		"audio": {
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
-		},
 		"image": {
 			"fileType": "jpeg",
-			"volume": 215,
-			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
-			"source": "public|private",
+			"volume": 215999,
+			"volumeUnit": "kilobyte",
+			"source": "public",
 			"sourceUri": "https://www.kaggle.com/datasets/imsparsh/flowers-dataset/",
 			"items": 4500,
 			"itemsDimension": {
@@ -69,15 +49,15 @@
 			"itemsDimension": null
 		}
 	},
-	"taskType": "preprocessing|clustering|classification|reinforcement|finetuning|inference",
-	"taskSubtype": "vectorization",
+	"taskType": "classification",
+	"taskSubtype": null,
 	"measurementMethod": {
 		"software": {
 			"CodeCarbon": {
 				"solutionFamily": "library",
 				"solutionVersion": "2.3.2",
 				"measureUnit": "Wh",
-				"measureValue": 459	
+				"measureValue": 450	
 			},
 			"CarbonAI": {
 				"solutionVersion": null,
@@ -85,15 +65,6 @@
 				"measureValue": null	
 			},
 			"PyJoule": {}
-		},
-		"hardware": {
-			"PCE-PA6000": {
-				"instrumentFamily": "WattMeter",
-				"instrumentManufacturer": "PCE Instruments",
-				"eanCode": "4250348701152",
-				"measureUnit": "Wh",
-				"measure": null		
-			}
 		}
 	},
 	"taskContext": {
@@ -124,18 +95,18 @@
 	"hardwareContext": {
 		"shared": true,
 		"cpu": {
-			"items": 1,
+			"items": 2,
 			"manufacturer": "AMD",
 			"family": "Ryzen",
-			"series": "7000X3D",
-			"share": 0.2
+			"series": "8000X3D",
+			"share": 0.4
 		},
 		"gpu": {
-			"items": 4,
+			"items": 2,
 			"manufacturer": "NVIDIA",
 			"family": "GeForce",
 			"series": "RTX 4090",
-			"share": 0.5
+			"share": null
 		},
 		"motherboard": null,
 		"drive": null,
@@ -148,9 +119,9 @@
 		"longitude": null,
 		"location": null,
 		"powerSupplierType": "public|private|internal",
-		"powerSource": "default|solar|wind|nuclear|hydro|gas|coal|other",
+		"powerSource": "nuclear",
 		"powerSourceCarbonIntensityUnit": "gCO2eq/kWh",
-		"powerSourceCarbonIntensity": 85
+		"powerSourceCarbonIntensity": 22
 	},
 	"contentHash": {
 		"algorithm": "RSA",

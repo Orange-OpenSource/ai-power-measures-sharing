@@ -3,15 +3,15 @@
 		"licensing": "Creative Commons 4.0",
 		"formatVersion": "0.1",
 		"formatVersionSpecificationUri": null,
-		"reportId": "uuid4-string",
+		"reportId": "2f4641f7-68b4-4fb3-97f0-b5dcda04527d",
 		"reportDatetime": "2023-12-01 08:30:00",
-		"reportStatus": "draft|final|corrective",
+		"reportStatus": "draft",
 		"publisher": {
 			"name": null,
 			"division": null,
 			"location": null,
 			"projectName": null,
-			"confidentialityLevel": "public|internal|confidential|secret",
+			"confidentialityLevel": "public",
 			"publicKey": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQCSFe5dQLBl+USwot9wrko1tYvipUnXKMDGQuxtghQKbYRVOFMMsIntTqYw6wqRqenHqC3aWUpPdv1JUls9Rf32T5Xqdu+yEshvyGwyo+gHfRynZSF4Qe3wSf8kXYJVLbM0jRDPCKManruppKXr+aqIW8JiD+wfDsvBGhM5ftUKzw=="
 		}
 	},
@@ -19,8 +19,8 @@
 		"tabular": {
 			"fileType": "csv",
 			"volume": 80,
-			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
-			"source": "public|private",
+			"volumeUnit": "megabyte",
+			"source": "private",
 			"sourceUri": null,
 			"items": 150000,
 			"itemsDimension": {
@@ -35,41 +35,9 @@
 			"sourceUri": null,
 			"items": null,
 			"itemsDimension": null
-		},
-		"image": {
-			"fileType": "jpeg",
-			"volume": 215,
-			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
-			"source": "public|private",
-			"sourceUri": "https://www.kaggle.com/datasets/imsparsh/flowers-dataset/",
-			"items": 4500,
-			"itemsDimension": {
-				"1": 256,
-				"2": 256
-			}
-		},
-		"video": {
-			"active": false,
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
-		},
-		"object": {
-			"active": false,
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
 		}
 	},
-	"taskType": "preprocessing|clustering|classification|reinforcement|finetuning|inference",
+	"taskType": "preprocessing",
 	"taskSubtype": "vectorization",
 	"measurementMethod": {
 		"software": {
@@ -97,19 +65,7 @@
 		}
 	},
 	"taskContext": {
-		"algorithms": {
-			"ResNet50": {
-				"framework": "TensorFlow",
-				"frameworkVersion": "2.14.0",
-				"classPath": "tf.keras.applications.resnet50.ResNet50",
-				"hyperparameters": {
-					"key1": "value1"
-				},
-				"trainPercent": 0.7,
-				"validationPercent": 0.3,
-				"testPercent": 0.0
-			}
-		}
+		"algorithms": { }
 	},
 	"systemContext": {
 		"os": "Linux",
@@ -119,7 +75,7 @@
 	},
 	"softwareContext": {
 		"language": "python",
-		"version": "3.11.6"
+		"version": "3.8.0"
 	},
 	"hardwareContext": {
 		"shared": true,
@@ -147,8 +103,8 @@
 		"latitude": null,
 		"longitude": null,
 		"location": null,
-		"powerSupplierType": "public|private|internal",
-		"powerSource": "default|solar|wind|nuclear|hydro|gas|coal|other",
+		"powerSupplierType": "public",
+		"powerSource": "default",
 		"powerSourceCarbonIntensityUnit": "gCO2eq/kWh",
 		"powerSourceCarbonIntensity": 85
 	},
