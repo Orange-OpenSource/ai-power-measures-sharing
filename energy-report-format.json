@@ -69,8 +69,6 @@
 			"itemsDimension": null
 		}
 	},
-	"taskType": "preprocessing|clustering|classification|reinforcement|finetuning|inference",
-	"taskSubtype": "vectorization",
 	"measurementMethod": {
 		"software": {
 			"CodeCarbon": {
@@ -92,11 +90,15 @@
 				"instrumentManufacturer": "PCE Instruments",
 				"eanCode": "4250348701152",
 				"measureUnit": "Wh",
-				"measure": null		
+				"measureValue": null		
 			}
 		}
 	},
 	"taskContext": {
+		"taskDomain": "machine-learning|general-software|gaming|...",
+		"taskSubDomain": "deep-learning|reinforcement-learning|...",
+		"taskType": "preprocessing|clustering|classification|reinforcement|finetuning|inference",
+		"taskSubType": "vectorization",
 		"algorithms": {
 			"ResNet50": {
 				"framework": "TensorFlow",

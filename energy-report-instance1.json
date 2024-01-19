@@ -37,8 +37,6 @@
 			"itemsDimension": null
 		}
 	},
-	"taskType": "preprocessing",
-	"taskSubtype": "vectorization",
 	"measurementMethod": {
 		"software": {
 			"CodeCarbon": {
@@ -60,11 +58,15 @@
 				"instrumentManufacturer": "PCE Instruments",
 				"eanCode": "4250348701152",
 				"measureUnit": "Wh",
-				"measure": null		
+				"measureValue": null		
 			}
 		}
 	},
 	"taskContext": {
+		"taskDomain": "machine-learning",
+		"taskSubDomain": "nlp",
+		"taskType": "preprocessing",
+		"taskSubtype": "vectorization",
 		"algorithms": { }
 	},
 	"systemContext": {

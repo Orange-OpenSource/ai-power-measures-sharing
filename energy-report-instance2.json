@@ -49,8 +49,6 @@
 			"itemsDimension": null
 		}
 	},
-	"taskType": "classification",
-	"taskSubtype": null,
 	"measurementMethod": {
 		"software": {
 			"CodeCarbon": {
@@ -68,6 +66,10 @@
 		}
 	},
 	"taskContext": {
+		"taskDomain": "deep-learning",
+		"taskSubDomain": "image-processing",
+		"taskType": "classification",
+		"taskSubtype": null,
 		"algorithms": {
 			"ResNet50": {
 				"framework": "TensorFlow",
