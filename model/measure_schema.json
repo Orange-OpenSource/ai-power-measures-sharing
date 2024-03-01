@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://github.com/Orange-OpenSource/ai-power-measures-sharing/model/measure_schema.json",
+    "title": "measure",
+    "description": "the energy measure obtained from software and/or hardware tools, for a computing task",
+    "type": "object",
+    "properties": {
+      "$$key": {
+        "enum": [ "CodeCarbon", "CarbonAI", "pyJoules", "pyRAPL", "PowerGadget", "redutils", "JEPO", "JoularJX", "Win32_PowerMeter", "flops-compute", "flops-counter", "flopco-pytorch", "ptflops", "flops.r", "$Wattmeter", "$other" ],
+        "description": "the method used to perform the energy or FLOPS measure"
+      },
+      "manufacturer": {
+        "type": "string",
+        "description": "the builder of the measuring tool, noticeably used for a device (if so, $$key value should be set to $Wattmeter)"
+      },
+      "version": {
+        "type": "string",
+        "description": "the version of the measuring tool, if any"
+      },
+      "unit": {
+        "type": "string",
+        "enum": [ "Wh", "kWh", "MWh", "GWh", "kJoule", "MJoule", "GJoule", "TJoule", "PJoule", "BTU", "kiloFLOPS", "megaFLOPS", "gigaFLOPS", "teraFLOPS", "petaFLOPS", "exaFLOPS", "zettaFLOPS", "yottaFLOPS" ],
+        "description": "the unit of the power consumption measure of the computing task"
+      },
+      "value": {
+        "type": "number",
+        "description": "the power consumption measure of the computing task"
+      }
+    },
+    "required": [
+      "$$key",
+      "unit",
+      "value"
+    ]
+}

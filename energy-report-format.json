@@ -15,145 +15,50 @@
 			"publicKey": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQCSFe5dQLBl+USwot9wrko1tYvipUnXKMDGQuxtghQKbYRVOFMMsIntTqYw6wqRqenHqC3aWUpPdv1JUls9Rf32T5Xqdu+yEshvyGwyo+gHfRynZSF4Qe3wSf8kXYJVLbM0jRDPCKManruppKXr+aqIW8JiD+wfDsvBGhM5ftUKzw=="
 		}
 	},
-	"dataTypes": [
-		{
-			"$$key": "tabular",
-			"fileType": "csv",
-			"volume": 80,
-			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
-			"source": "public|private",
-			"sourceUri": null,
-			"items": 150000,
-			"itemsDimension": {
-				"1": 60
-			} 
-		},
-		{
-			"$$key": "audio",
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
-		},
-		{
-			"$$key": "image",
-			"fileType": "jpeg",
-			"volume": 215,
-			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
-			"source": "public|private",
-			"sourceUri": "https://www.kaggle.com/datasets/imsparsh/flowers-dataset/",
-			"items": 4500,
-			"itemsDimension": {
-				"1": 256,
-				"2": 256
-			}
-		},
-		{
-			"$$key": "video",
-			"active": false,
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
-		},
-		{
-			"$$key": "object",
-			"active": false,
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
-		}
+	"datasets": [
 	],
-	"measurements": [
-		{
-			"$$key": "CodeCarbon",
-			"nature": "software",
-			"solutionFamily": "library",
-			"solutionManufacturer": "CodeCarbon",
-			"solutionVersion": "2.3.2",
-			"measureUnit": "Wh",
-			"measureValue": 459	
-		},
-		{
-			"$$key": "CarbonAI",
-			"nature": "software",
-			"solutionFamily": "library",
-			"solutionManufacturer": "CarbonAI",
-			"solutionVersion": null,
-			"measureUnit": null,
-			"measureValue": null	
-		},
-		{
-			"$$key": "PCE-PA6000",
-			"nature": "hardware",
-			"solutionFamily": "device",
-			"solutionManufacturer": "PCE Instruments",
-			"solutionVersion": null,
-			"measureUnit": null,
-			"measureValue": null	
-		}
+	"measures": [
 	],
-	"taskContext": {
-		"taskDomain": "machine-learning|general-software|gaming|...",
-		"taskSubDomain": "deep-learning|reinforcement-learning|...",
-		"taskType": "preprocessing|clustering|classification|reinforcement|finetuning|inference",
-		"taskSubType": "vectorization",
-		"algorithms": {
-			"ResNet50": {
-				"framework": "TensorFlow",
-				"frameworkVersion": "2.14.0",
-				"classPath": "tf.keras.applications.resnet50.ResNet50",
-				"hyperparameters": {
-					"key1": "value1"
-				},
-				"trainPercent": 0.7,
-				"validationPercent": 0.3,
-				"testPercent": 0.0
-			}
-		}
+	"task": {
+		"domain": "machine-learning|deep-learning|general-software|gaming|",
+		"altDomain": "",
+		"type": "preprocessing|supervised|unsupervised|semisupervised|reinforcement|finetuning|inference|postprocessing",
+		"altType": "",
+		"algorithms": [
+		]
 	},
-	"systemContext": {
+	"system": {
 		"os": "Linux",
-		"distribution": "RedHat",
-		"distributionVersion": "Enterprise Linux 9",
+		"distro": "RedHat",
+		"distroVersion": "Enterprise Linux 9",
 		"kernelVersion": null
 	},
-	"softwareContext": {
+	"software": {
 		"language": "python",
 		"version": "3.11.6"
 	},
-	"hardwareContext": {
+	"infrastructure": {
 		"shared": true,
-		"cpu": {
-			"items": 1,
-			"manufacturer": "AMD",
-			"family": "Ryzen",
-			"series": "7000X3D",
-			"share": 0.2
-		},
-		"gpu": {
-			"items": 4,
-			"manufacturer": "NVIDIA",
-			"family": "GeForce",
-			"series": "RTX 4090",
-			"share": 0.5
-		},
-		"motherboard": null,
-		"drive": null,
-		"fans": null,
-		"extra": null
+		"parts": [
+			{
+				"$$key": "cpu",
+				"items": 1,
+				"manufacturer": "AMD",
+				"family": "Ryzen",
+				"series": "7000X3D",
+				"share": 0.2
+			},
+			{
+				"$$key": "gpu",
+				"items": 4,
+				"manufacturer": "NVIDIA",
+				"family": "GeForce",
+				"series": "RTX 4090",
+				"share": 0.5
+			}
+		]
 	},
-	"environment": {
+	"region": {
 		"country": "France",
 		"latitude": null,
 		"longitude": null,
@@ -163,7 +68,7 @@
 		"powerSourceCarbonIntensityUnit": "gCO2eq/kWh",
 		"powerSourceCarbonIntensity": 85
 	},
-	"contentHash": {
+	"hash": {
 		"algorithm": "RSA",
 		"value": "7BBAD02FC4C657A2CC858CD4EA2EC751"
 	}

@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://github.com/Orange-OpenSource/ai-power-measures-sharing/model/hardware_schema.json",
+    "title": "hardware",
+    "description": "a hardware subsystem part of the infrastructure running the computing task",
+    "type": "object",
+    "properties": {
+      "$$key": {
+        "type": "string"
+      },
+      "items": {
+        "type": "integer"
+      },
+      "manufacturer": {
+        "type": "string"
+      },
+      "family": {
+        "type": "string"
+      },
+      "series": {
+        "type": "string"
+      },
+      "share": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "$$key",
+      "items",
+      "manufacturer",
+      "family",
+      "series",
+      "share"
+    ]
+}

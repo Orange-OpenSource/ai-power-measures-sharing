@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://github.com/Orange-OpenSource/ai-power-measures-sharing/model/algorithm_schema.json",
+    "title": "algorithm",
+    "description": "the type of algorithm used by the computing task",
+    "type": "object",
+    "properties": {
+      "$$key": {
+        "type": "string",
+        "description": "the case-sensitive common name of the algorithm"
+      },
+      "framework": {
+        "type": "string",
+        "description": "the common name of the software framework implementing the algorithm, if any"
+      },
+      "frameworkVersion": {
+        "type": "string",
+        "description": "the version of the software framework implementing the algorithm, if any"
+      },
+      "classPath": {
+        "type": "string",
+        "description": "the full class path of the algorithm within the framework, with elements separated by dots"
+      },
+      "hyperparameters": {
+        "type": "object"
+      },
+      "trainPercent": {
+        "type": "number"
+      },
+      "validationPercent": {
+        "type": "number"
+      },
+      "testPercent": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "$$key"
+    ]
+  }
