@@ -62,9 +62,8 @@ These could typically inspire the ground for a format of reporting.
 ## 5. Format principles
 
 The JSON structure is proposed for the sake of clarity for human users, and fields extensibility.
-The JSON grammar is purposedly limited to objects / properties. 
-JSON arrays are forbidden in order to have a non-ambiguous column naming, when converting to tabular format (the sorting within the array cannot be guaranteed, leading to possible naming ambiguity).
-If the separator used to flatten nested properties is also used in the properties themselves (strongly deprecated), then a column integrity control *must* be performed in the flattening function converting to tabular format.
+Since flattening an object containing arrays leads to a naming issues (array items have no label, and array index is not guaranteed between instances), a specific flattening scheme is proposed for arrays, thanks to the reserved property label "$$key".
+*If* an array is present, then all array items *must* contain a property "$$key". Otherwise, a flattening exception is raised.
 
 
 ## 6. Architecture Scenarii

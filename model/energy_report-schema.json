@@ -1,0 +1,644 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "header": {
+        "type": "object",
+        "properties": {
+            "licensing": {
+            "type": "string"
+            },
+            "formatVersion": {
+            "type": "string"
+            },
+            "formatVersionSpecificationUri": {
+            "type": "null"
+            },
+            "reportId": {
+            "type": "string"
+            },
+            "reportDatetime": {
+            "type": "string"
+            },
+            "reportStatus": {
+            "type": "string"
+            },
+            "publisher": {
+            "type": "object",
+            "properties": {
+                "name": {
+                "type": "null"
+                },
+                "division": {
+                "type": "null"
+                },
+                "location": {
+                "type": "null"
+                },
+                "projectName": {
+                "type": "null"
+                },
+                "confidentialityLevel": {
+                "type": "string"
+                },
+                "publicKey": {
+                "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "division",
+                "location",
+                "projectName",
+                "confidentialityLevel",
+                "publicKey"
+            ]
+            }
+        },
+        "required": [
+            "licensing",
+            "formatVersion",
+            "formatVersionSpecificationUri",
+            "reportId",
+            "reportDatetime",
+            "reportStatus",
+            "publisher"
+        ]
+        },
+        "dataTypes": {
+        "type": "object",
+        "properties": {
+            "tabular": {
+            "type": "object",
+            "properties": {
+                "fileType": {
+                "type": "string"
+                },
+                "volume": {
+                "type": "integer"
+                },
+                "volumeUnit": {
+                "type": "string"
+                },
+                "source": {
+                "type": "string"
+                },
+                "sourceUri": {
+                "type": "null"
+                },
+                "items": {
+                "type": "integer"
+                },
+                "itemsDimension": {
+                "type": "object",
+                "properties": {
+                    "1": {
+                    "type": "integer"
+                    }
+                },
+                "required": [
+                    "1"
+                ]
+                }
+            },
+            "required": [
+                "fileType",
+                "volume",
+                "volumeUnit",
+                "source",
+                "sourceUri",
+                "items",
+                "itemsDimension"
+            ]
+            },
+            "audio": {
+            "type": "object",
+            "properties": {
+                "fileType": {
+                "type": "null"
+                },
+                "volume": {
+                "type": "integer"
+                },
+                "volumeUnit": {
+                "type": "null"
+                },
+                "source": {
+                "type": "null"
+                },
+                "sourceUri": {
+                "type": "null"
+                },
+                "items": {
+                "type": "null"
+                },
+                "itemsDimension": {
+                "type": "null"
+                }
+            },
+            "required": [
+                "fileType",
+                "volume",
+                "volumeUnit",
+                "source",
+                "sourceUri",
+                "items",
+                "itemsDimension"
+            ]
+            },
+            "image": {
+            "type": "object",
+            "properties": {
+                "fileType": {
+                "type": "string"
+                },
+                "volume": {
+                "type": "integer"
+                },
+                "volumeUnit": {
+                "type": "string"
+                },
+                "source": {
+                "type": "string"
+                },
+                "sourceUri": {
+                "type": "string"
+                },
+                "items": {
+                "type": "integer"
+                },
+                "itemsDimension": {
+                "type": "object",
+                "properties": {
+                    "1": {
+                    "type": "integer"
+                    },
+                    "2": {
+                    "type": "integer"
+                    }
+                },
+                "required": [
+                    "1",
+                    "2"
+                ]
+                }
+            },
+            "required": [
+                "fileType",
+                "volume",
+                "volumeUnit",
+                "source",
+                "sourceUri",
+                "items",
+                "itemsDimension"
+            ]
+            },
+            "video": {
+            "type": "object",
+            "properties": {
+                "active": {
+                "type": "boolean"
+                },
+                "fileType": {
+                "type": "null"
+                },
+                "volume": {
+                "type": "integer"
+                },
+                "volumeUnit": {
+                "type": "null"
+                },
+                "source": {
+                "type": "null"
+                },
+                "sourceUri": {
+                "type": "null"
+                },
+                "items": {
+                "type": "null"
+                },
+                "itemsDimension": {
+                "type": "null"
+                }
+            },
+            "required": [
+                "active",
+                "fileType",
+                "volume",
+                "volumeUnit",
+                "source",
+                "sourceUri",
+                "items",
+                "itemsDimension"
+            ]
+            },
+            "object": {
+            "type": "object",
+            "properties": {
+                "active": {
+                "type": "boolean"
+                },
+                "fileType": {
+                "type": "null"
+                },
+                "volume": {
+                "type": "integer"
+                },
+                "volumeUnit": {
+                "type": "null"
+                },
+                "source": {
+                "type": "null"
+                },
+                "sourceUri": {
+                "type": "null"
+                },
+                "items": {
+                "type": "null"
+                },
+                "itemsDimension": {
+                "type": "null"
+                }
+            },
+            "required": [
+                "active",
+                "fileType",
+                "volume",
+                "volumeUnit",
+                "source",
+                "sourceUri",
+                "items",
+                "itemsDimension"
+            ]
+            }
+        },
+        "required": [
+            "tabular",
+            "audio",
+            "image",
+            "video",
+            "object"
+        ]
+        },
+        "measurementMethod": {
+        "type": "object",
+        "properties": {
+            "software": {
+            "type": "object",
+            "properties": {
+                "CodeCarbon": {
+                "type": "object",
+                "properties": {
+                    "solutionFamily": {
+                    "type": "string"
+                    },
+                    "solutionVersion": {
+                    "type": "string"
+                    },
+                    "measureUnit": {
+                    "type": "string"
+                    },
+                    "measureValue": {
+                    "type": "integer"
+                    }
+                },
+                "required": [
+                    "solutionFamily",
+                    "solutionVersion",
+                    "measureUnit",
+                    "measureValue"
+                ]
+                },
+                "CarbonAI": {
+                "type": "object",
+                "properties": {
+                    "solutionVersion": {
+                    "type": "null"
+                    },
+                    "measureUnit": {
+                    "type": "null"
+                    },
+                    "measureValue": {
+                    "type": "null"
+                    }
+                },
+                "required": [
+                    "solutionVersion",
+                    "measureUnit",
+                    "measureValue"
+                ]
+                },
+                "PyJoule": {
+                "type": "object"
+                }
+            },
+            "required": [
+                "CodeCarbon",
+                "CarbonAI",
+                "PyJoule"
+            ]
+            },
+            "hardware": {
+            "type": "object",
+            "properties": {
+                "PCE-PA6000": {
+                "type": "object",
+                "properties": {
+                    "instrumentFamily": {
+                    "type": "string"
+                    },
+                    "instrumentManufacturer": {
+                    "type": "string"
+                    },
+                    "eanCode": {
+                    "type": "string"
+                    },
+                    "measureUnit": {
+                    "type": "string"
+                    },
+                    "measureValue": {
+                    "type": "null"
+                    }
+                },
+                "required": [
+                    "instrumentFamily",
+                    "instrumentManufacturer",
+                    "eanCode",
+                    "measureUnit",
+                    "measureValue"
+                ]
+                }
+            },
+            "required": [
+                "PCE-PA6000"
+            ]
+            }
+        },
+        "required": [
+            "software",
+            "hardware"
+        ]
+        },
+        "taskContext": {
+        "type": "object",
+        "properties": {
+            "taskDomain": {
+            "type": "string"
+            },
+            "taskSubDomain": {
+            "type": "string"
+            },
+            "taskType": {
+            "type": "string"
+            },
+            "taskSubType": {
+            "type": "string"
+            },
+            "algorithms": {
+            "type": "object",
+            "properties": {
+                "ResNet50": {
+                "type": "object",
+                "properties": {
+                    "framework": {
+                    "type": "string"
+                    },
+                    "frameworkVersion": {
+                    "type": "string"
+                    },
+                    "classPath": {
+                    "type": "string"
+                    },
+                    "hyperparameters": {
+                    "type": "object",
+                    "properties": {
+                        "key1": {
+                        "type": "string"
+                        }
+                    },
+                    "required": [
+                        "key1"
+                    ]
+                    },
+                    "trainPercent": {
+                    "type": "number"
+                    },
+                    "validationPercent": {
+                    "type": "number"
+                    },
+                    "testPercent": {
+                    "type": "number"
+                    }
+                },
+                "required": [
+                    "framework",
+                    "frameworkVersion",
+                    "classPath",
+                    "hyperparameters",
+                    "trainPercent",
+                    "validationPercent",
+                    "testPercent"
+                ]
+                }
+            },
+            "required": [
+                "ResNet50"
+            ]
+            }
+        },
+        "required": [
+            "taskDomain",
+            "taskSubDomain",
+            "taskType",
+            "taskSubType",
+            "algorithms"
+        ]
+        },
+        "systemContext": {
+        "type": "object",
+        "properties": {
+            "os": {
+            "type": "string"
+            },
+            "distribution": {
+            "type": "string"
+            },
+            "distributionVersion": {
+            "type": "string"
+            },
+            "kernelVersion": {
+            "type": "null"
+            }
+        },
+        "required": [
+            "os",
+            "distribution",
+            "distributionVersion",
+            "kernelVersion"
+        ]
+        },
+        "softwareContext": {
+        "type": "object",
+        "properties": {
+            "language": {
+            "type": "string"
+            },
+            "version": {
+            "type": "string"
+            }
+        },
+        "required": [
+            "language",
+            "version"
+        ]
+        },
+        "hardwareContext": {
+        "type": "object",
+        "properties": {
+            "shared": {
+            "type": "boolean"
+            },
+            "cpu": {
+            "type": "object",
+            "properties": {
+                "items": {
+                "type": "integer"
+                },
+                "manufacturer": {
+                "type": "string"
+                },
+                "family": {
+                "type": "string"
+                },
+                "series": {
+                "type": "string"
+                },
+                "share": {
+                "type": "number"
+                }
+            },
+            "required": [
+                "items",
+                "manufacturer",
+                "family",
+                "series",
+                "share"
+            ]
+            },
+            "gpu": {
+            "type": "object",
+            "properties": {
+                "items": {
+                "type": "integer"
+                },
+                "manufacturer": {
+                "type": "string"
+                },
+                "family": {
+                "type": "string"
+                },
+                "series": {
+                "type": "string"
+                },
+                "share": {
+                "type": "number"
+                }
+            },
+            "required": [
+                "items",
+                "manufacturer",
+                "family",
+                "series",
+                "share"
+            ]
+            },
+            "motherboard": {
+            "type": "null"
+            },
+            "drive": {
+            "type": "null"
+            },
+            "fans": {
+            "type": "null"
+            },
+            "extra": {
+            "type": "null"
+            }
+        },
+        "required": [
+            "shared",
+            "cpu",
+            "gpu",
+            "motherboard",
+            "drive",
+            "fans",
+            "extra"
+        ]
+        },
+        "environment": {
+        "type": "object",
+        "properties": {
+            "country": {
+            "type": "string"
+            },
+            "latitude": {
+            "type": "null"
+            },
+            "longitude": {
+            "type": "null"
+            },
+            "location": {
+            "type": "null"
+            },
+            "powerSupplierType": {
+            "type": "string"
+            },
+            "powerSource": {
+            "type": "string"
+            },
+            "powerSourceCarbonIntensityUnit": {
+            "type": "string"
+            },
+            "powerSourceCarbonIntensity": {
+            "type": "integer"
+            }
+        },
+        "required": [
+            "country",
+            "latitude",
+            "longitude",
+            "location",
+            "powerSupplierType",
+            "powerSource",
+            "powerSourceCarbonIntensityUnit",
+            "powerSourceCarbonIntensity"
+        ]
+        },
+        "contentHash": {
+        "type": "object",
+        "properties": {
+            "algorithm": {
+            "type": "string"
+            },
+            "value": {
+            "type": "string"
+            }
+        },
+        "required": [
+            "algorithm",
+            "value"
+        ]
+        }
+    },
+    "required": [
+        "header",
+        "dataTypes",
+        "measurementMethod",
+        "taskContext",
+        "systemContext",
+        "softwareContext",
+        "hardwareContext",
+        "environment",
+        "contentHash"
+    ]
+  }

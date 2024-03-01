@@ -3,7 +3,7 @@
 		"licensing": "Creative Commons 4.0",
 		"formatVersion": "0.1",
 		"formatVersionSpecificationUri": null,
-		"reportId": "uuid4-string",
+		"reportId": "[uuid4-string]",
 		"reportDatetime": "2023-12-01 08:30:00",
 		"reportStatus": "draft|final|corrective",
 		"publisher": {
@@ -15,8 +15,9 @@
 			"publicKey": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQCSFe5dQLBl+USwot9wrko1tYvipUnXKMDGQuxtghQKbYRVOFMMsIntTqYw6wqRqenHqC3aWUpPdv1JUls9Rf32T5Xqdu+yEshvyGwyo+gHfRynZSF4Qe3wSf8kXYJVLbM0jRDPCKManruppKXr+aqIW8JiD+wfDsvBGhM5ftUKzw=="
 		}
 	},
-	"dataTypes": {
-		"tabular": {
+	"dataTypes": [
+		{
+			"$$key": "tabular",
 			"fileType": "csv",
 			"volume": 80,
 			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
@@ -27,7 +28,8 @@
 				"1": 60
 			} 
 		},
-		"audio": {
+		{
+			"$$key": "audio",
 			"fileType": null,
 			"volume": 0,
 			"volumeUnit": null,
@@ -36,7 +38,8 @@
 			"items": null,
 			"itemsDimension": null
 		},
-		"image": {
+		{
+			"$$key": "image",
 			"fileType": "jpeg",
 			"volume": 215,
 			"volumeUnit": "kilobyte|megabyte|gigabyte|terabyte",
@@ -48,7 +51,8 @@
 				"2": 256
 			}
 		},
-		"video": {
+		{
+			"$$key": "video",
 			"active": false,
 			"fileType": null,
 			"volume": 0,
@@ -58,7 +62,8 @@
 			"items": null,
 			"itemsDimension": null
 		},
-		"object": {
+		{
+			"$$key": "object",
 			"active": false,
 			"fileType": null,
 			"volume": 0,
@@ -68,32 +73,36 @@
 			"items": null,
 			"itemsDimension": null
 		}
-	},
-	"measurementMethod": {
-		"software": {
-			"CodeCarbon": {
-				"solutionFamily": "library",
-				"solutionVersion": "2.3.2",
-				"measureUnit": "Wh",
-				"measureValue": 459	
-			},
-			"CarbonAI": {
-				"solutionVersion": null,
-				"measureUnit": null,
-				"measureValue": null	
-			},
-			"PyJoule": {}
+	],
+	"measurements": [
+		{
+			"$$key": "CodeCarbon",
+			"nature": "software",
+			"solutionFamily": "library",
+			"solutionManufacturer": "CodeCarbon",
+			"solutionVersion": "2.3.2",
+			"measureUnit": "Wh",
+			"measureValue": 459	
 		},
-		"hardware": {
-			"PCE-PA6000": {
-				"instrumentFamily": "WattMeter",
-				"instrumentManufacturer": "PCE Instruments",
-				"eanCode": "4250348701152",
-				"measureUnit": "Wh",
-				"measureValue": null		
-			}
+		{
+			"$$key": "CarbonAI",
+			"nature": "software",
+			"solutionFamily": "library",
+			"solutionManufacturer": "CarbonAI",
+			"solutionVersion": null,
+			"measureUnit": null,
+			"measureValue": null	
+		},
+		{
+			"$$key": "PCE-PA6000",
+			"nature": "hardware",
+			"solutionFamily": "device",
+			"solutionManufacturer": "PCE Instruments",
+			"solutionVersion": null,
+			"measureUnit": null,
+			"measureValue": null	
 		}
-	},
+	],
 	"taskContext": {
 		"taskDomain": "machine-learning|general-software|gaming|...",
 		"taskSubDomain": "deep-learning|reinforcement-learning|...",
