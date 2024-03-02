@@ -315,7 +315,7 @@ The object's properties should be integer numbers in string format: "1", "2", "3
 The field can take one of the following values:
 - Wh
 - kWh
-- mWh
+- MWh
 
 ### CarbonAI
 
@@ -324,7 +324,7 @@ The field can take one of the following values:
 The field can take one of the following values:
 - Wh
 - kWh
-- mWh
+- MWh
 
 ### CarbonAI
 
@@ -333,7 +333,7 @@ The field can take one of the following values:
 The field can take one of the following values:
 - Wh
 - kWh
-- mWh
+- MWh
 
 ## hardware [properties]
 
@@ -369,78 +369,3 @@ The object's properties should be one value among the following:
 - Fluke-PRV240
 - Fluke-PRV240FS
 - Fluke-8808A
-
-			"PCE-PA6000": {
-				"instrumentFamily": "WattMeter",
-				"instrumentManufacturer": "PCE Instruments",
-				"eanCode": "4250348701152",
-				"measureUnit": "Wh",
-				"measureValue": null		
-			}
-		}
-	},
-	"taskContext": {
-		"taskDomain": "machine-learning|general-software|gaming|...",
-		"taskSubDomain": "deep-learning|reinforcement-learning|...",
-		"taskType": "preprocessing|clustering|classification|reinforcement|finetuning|inference",
-		"taskSubType": "vectorization",
-		"algorithms": {
-			"ResNet50": {
-				"framework": "TensorFlow",
-				"frameworkVersion": "2.14.0",
-				"classPath": "tf.keras.applications.resnet50.ResNet50",
-				"hyperparameters": {
-					"key1": "value1"
-				},
-				"trainPercent": 0.7,
-				"validationPercent": 0.3,
-				"testPercent": 0.0
-			}
-		}
-	},
-	"systemContext": {
-		"os": "Linux",
-		"distribution": "RedHat",
-		"distributionVersion": "Enterprise Linux 9",
-		"kernelVersion": null
-	},
-	"softwareContext": {
-		"language": "python",
-		"version": "3.11.6"
-	},
-	"hardwareContext": {
-		"shared": true,
-		"cpu": {
-			"items": 1,
-			"manufacturer": "AMD",
-			"family": "Ryzen",
-			"series": "7000X3D",
-			"share": 0.2
-		},
-		"gpu": {
-			"items": 4,
-			"manufacturer": "NVIDIA",
-			"family": "GeForce",
-			"series": "RTX 4090",
-			"share": 0.5
-		},
-		"motherboard": null,
-		"drive": null,
-		"fans": null,
-		"extra": null
-	},
-	"environment": {
-		"country": "France",
-		"latitude": null,
-		"longitude": null,
-		"location": null,
-		"powerSupplierType": "public|private|internal",
-		"powerSource": "default|solar|wind|nuclear|hydro|gas|coal|other",
-		"powerSourceCarbonIntensityUnit": "gCO2eq/kWh",
-		"powerSourceCarbonIntensity": 85
-	},
-	"contentHash": {
-		"algorithm": "RSA",
-		"value": "7BBAD02FC4C657A2CC858CD4EA2EC751"
-	}
-}

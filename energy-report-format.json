@@ -9,7 +9,6 @@
 		"publisher": {
 			"name": null,
 			"division": null,
-			"location": null,
 			"projectName": null,
 			"confidentialityLevel": "public|internal|confidential|secret",
 			"publicKey": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQCSFe5dQLBl+USwot9wrko1tYvipUnXKMDGQuxtghQKbYRVOFMMsIntTqYw6wqRqenHqC3aWUpPdv1JUls9Rf32T5Xqdu+yEshvyGwyo+gHfRynZSF4Qe3wSf8kXYJVLbM0jRDPCKManruppKXr+aqIW8JiD+wfDsvBGhM5ftUKzw=="
@@ -20,7 +19,7 @@
 	"measures": [
 	],
 	"task": {
-		"domain": "machine-learning|deep-learning|general-software|gaming|",
+		"domain": "machine-learning|deep-learning|general-software|gaming",
 		"altDomain": "",
 		"type": "preprocessing|supervised|unsupervised|semisupervised|reinforcement|finetuning|inference|postprocessing",
 		"altType": "",
@@ -68,8 +67,9 @@
 		"powerSourceCarbonIntensityUnit": "gCO2eq/kWh",
 		"powerSourceCarbonIntensity": 85
 	},
-	"hash": {
-		"algorithm": "RSA",
+	"$hash": {
+		"hashAlgorithm": "MD5",
+		"cryptographicAlgorithm": "RSA",
 		"value": "7BBAD02FC4C657A2CC858CD4EA2EC751"
 	}
 }
