@@ -6,3 +6,7 @@
 #!/usr/bin/python
 
 import unittest
+from tests.test_flattening import FlatteningTest
+
+if __name__ == '__main__':
+    unittest.main()

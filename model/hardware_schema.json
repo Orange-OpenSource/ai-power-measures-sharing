@@ -26,10 +26,6 @@
     },
     "required": [
       "$$key",
-      "items",
-      "manufacturer",
-      "family",
-      "series",
-      "share"
+      "items"
     ]
 }

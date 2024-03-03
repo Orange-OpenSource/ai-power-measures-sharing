@@ -31,19 +31,24 @@ class ObjectFlattener(object):
 
     def _flatten_node(self, n:dict, k:str, f:dict, prefix:str=''):
         if isinstance(n[k], dict):
+
             children_keys = n[k].keys()
             for c_k in children_keys:
                 self._flatten_node(n=n[k], k=c_k, f=f, prefix=prefix+k+self.separator)
+
         elif isinstance(n[k], list):
+
             # check elements' type homogeneity
             if len(n[k]) == 0:
                 return
             types_set = set([ type(elt).__name__ for elt in n[k] ])
+
             # possible lists are lists of dict or lists of literals
             if types_set.issubset(LITERAL_TYPES_SET) or types_set == NULL_TYPE_SET:
                 # the list contains only literals or null values
                 for i in range(len(n[k])):
-                    f[prefix+k+str(i)] = n[k][i]
+                    f[prefix+k+self.separator+str(i)] = n[k][i]
+
             elif types_set.issubset(DICT_OR_NULL_TYPES_SET):
                 # the list contains only objects or None and calls for the presence of '$$key' in keys of non-null items
                 presence = list(set([ Const.OBJECT_KEY_LABEL in list(elt.keys()) for elt in n[k] if elt is not None ]))
@@ -57,6 +62,9 @@ class ObjectFlattener(object):
                     children_keys = o.keys()
                     for c_k in children_keys:
                         self._flatten_node(n=o, k=c_k, f=f, prefix=prefix+k+self.separator+o_key+self.separator)
+
+            else:
+                raise InconsistentListException(column=prefix+k)
         else:
             flat_key = prefix+k
             if flat_key in list(f.keys()):
