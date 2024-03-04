@@ -1,12 +1,14 @@
-#################################
-# AI Power Measure Sharing      #
-# Creative Commons 4.0          #
-# Orange/INNOV/DATA-AI          #
-#################################
+# SPDX-License-Identifier: Creative Commons 4.0
+
+ #############################################################################
+# ~#~ AI Power Measure Sharing ~#~                                            #
+# 'Facilitate knowledge sharing and open data in AI's power consumption'      #
+# Orange/INNOV/DATA-AI, Orange Innovation Research Program 'Responsible AI'   #
+ #############################################################################
+
 #!/usr/bin/python
 
 import unittest
-from config.config import Config
 from services.object_flattener import ObjectFlattener
 
 class FlatteningTest(unittest.TestCase):
@@ -144,14 +146,3 @@ class FlatteningTest(unittest.TestCase):
             test = True
 
         self.assertEqual(test, True)
-
-
-
-    # print('Test 3 - Complete conversion from json to csv')
-    # with open('energy-report-instance1.json') as fp1:
-    #     with open('energy-report-instance2.json') as fp2:
-    #         df = pd.DataFrame([ 
-    #             of.flatten(json.load(fp1)),
-    #             of.flatten(json.load(fp2))
-    #         ])
-    #         df.to_csv('energy-report-format.csv', index=False, header=True)
