@@ -6,7 +6,7 @@
     "type": "object",
     "properties": {
       "$$key": {
-        "enum": [ "CodeCarbon", "CarbonAI", "pyJoules", "pyRAPL", "PowerGadget", "redutils", "JEPO", "JoularJX", "Win32_PowerMeter", "flops-compute", "flops-counter", "flopco-pytorch", "ptflops", "flops.r", "$Wattmeter", "$other" ],
+        "enum": [ "CodeCarbon", "CarbonAI", "pyJoules", "pynvml", "pyRAPL", "PowerGadget", "redutils", "JEPO", "JoularJX", "Win32_PowerMeter", "flops-compute", "flops-counter", "flopco-pytorch", "ptflops", "flops.r", "$Wattmeter", "$other" ],
         "description": "the method used to perform the energy or FLOPS measure"
       },
       "manufacturer": {

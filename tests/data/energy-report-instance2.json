@@ -8,125 +8,79 @@
 		"reportStatus": "corrective",
 		"publisher": {
 			"name": null,
-			"division": null,
-			"location": null,
 			"projectName": null,
 			"confidentialityLevel": "public",
 			"publicKey": null
 		}
 	},
-	"dataTypes": {
-		"image": {
-			"fileType": "jpeg",
-			"volume": 215999,
-			"volumeUnit": "kilobyte",
-			"source": "public",
-			"sourceUri": "https://www.kaggle.com/datasets/imsparsh/flowers-dataset/",
-			"items": 4500,
-			"itemsDimension": {
-				"1": 256,
-				"2": 256
-			}
-		},
-		"video": {
-			"active": false,
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
+	"datasets": [
+		{
+			"$$key": "image",
+			"volume": 80,
+			"volumeUnit": "megabyte",
+			"source": "private",
 			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
+			"items": 150000,
+			"itemsDimension": [ 60, 60, 32 ]
+		}
+	],
+	"measures": [
+		{
+			"$$key": "CodeCarbon",
+			"version": "2.3.2",
+			"unit": "Wh",
+			"value": 459	
 		},
-		"object": {
-			"active": false,
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
+		{
+			"$$key": "$Wattmeter",
+			"manufacturer": "PCE Instruments",
+			"unit": "Wh",
+			"value": 610		
 		}
-	},
-	"measurementMethod": {
-		"software": {
-			"CodeCarbon": {
-				"solutionFamily": "library",
-				"solutionVersion": "2.3.2",
-				"measureUnit": "Wh",
-				"measureValue": 450	
-			},
-			"CarbonAI": {
-				"solutionVersion": null,
-				"measureUnit": null,
-				"measureValue": null	
-			},
-			"PyJoule": {}
-		}
-	},
-	"taskContext": {
-		"taskDomain": "deep-learning",
-		"taskSubDomain": "image-processing",
-		"taskType": "classification",
-		"taskSubtype": null,
-		"algorithms": {
-			"ResNet50": {
-				"framework": "TensorFlow",
-				"frameworkVersion": "2.14.0",
-				"classPath": "tf.keras.applications.resnet50.ResNet50",
-				"hyperparameters": {
-					"key1": "value1"
-				},
-				"trainPercent": 0.7,
-				"validationPercent": 0.3,
-				"testPercent": 0.0
+	],
+	"task": {
+		"type": "deep-learning",
+		"algorithms": [
+			{
+				"$$key": "ResNet50"
 			}
-		}
+		]
 	},
-	"systemContext": {
-		"os": "Linux",
-		"distribution": "RedHat",
-		"distributionVersion": "Enterprise Linux 9",
-		"kernelVersion": null
-	},
-	"softwareContext": {
+	"software": {
 		"language": "python",
-		"version": "3.11.6"
+		"version": "3.8.0"
 	},
-	"hardwareContext": {
-		"shared": true,
-		"cpu": {
-			"items": 2,
+	"hardware": [
+		{
+			"$$key": "cpu",
+			"items": 1,
 			"manufacturer": "AMD",
 			"family": "Ryzen",
-			"series": "8000X3D",
-			"share": 0.4
+			"series": "7000X3D",
+			"share": 0.2
 		},
-		"gpu": {
-			"items": 2,
+		{
+			"$$key": "gpu",
+			"items": 4,
 			"manufacturer": "NVIDIA",
 			"family": "GeForce",
 			"series": "RTX 4090",
-			"share": null
-		},
-		"motherboard": null,
-		"drive": null,
-		"fans": null,
-		"extra": null
-	},
+			"share": 0.5
+		}
+	],
 	"environment": {
 		"country": "France",
 		"latitude": null,
 		"longitude": null,
 		"location": null,
-		"powerSupplierType": "public|private|internal",
-		"powerSource": "nuclear",
+		"powerSupplierType": "public",
+		"powerSource": "default",
 		"powerSourceCarbonIntensityUnit": "gCO2eq/kWh",
-		"powerSourceCarbonIntensity": 22
+		"powerSourceCarbonIntensity": 85
 	},
-	"contentHash": {
-		"algorithm": "RSA",
+	"$hash": {
+		"hashAlgorithm": "RIPEMD-160",
+		"cryptographicAlgorithm": "RSA",
 		"value": "7BBAD02FC4C657A2CC858CD4EA2EC751"
 	}
 }

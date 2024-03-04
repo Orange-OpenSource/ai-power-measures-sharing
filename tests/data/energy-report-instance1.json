@@ -9,99 +9,60 @@
 		"publisher": {
 			"name": null,
 			"division": null,
-			"location": null,
 			"projectName": null,
 			"confidentialityLevel": "public",
 			"publicKey": "AAAAB3NzaC1yc2EAAAADAQABAAAAgQCSFe5dQLBl+USwot9wrko1tYvipUnXKMDGQuxtghQKbYRVOFMMsIntTqYw6wqRqenHqC3aWUpPdv1JUls9Rf32T5Xqdu+yEshvyGwyo+gHfRynZSF4Qe3wSf8kXYJVLbM0jRDPCKManruppKXr+aqIW8JiD+wfDsvBGhM5ftUKzw=="
 		}
 	},
-	"dataTypes": {
-		"tabular": {
-			"fileType": "csv",
+	"datasets": [
+		{
+			"$$key": "tabular",
 			"volume": 80,
 			"volumeUnit": "megabyte",
 			"source": "private",
 			"sourceUri": null,
 			"items": 150000,
-			"itemsDimension": {
-				"1": 60
-			} 
-		},
-		"audio": {
-			"fileType": null,
-			"volume": 0,
-			"volumeUnit": null,
-			"source": null,
-			"sourceUri": null,
-			"items": null,
-			"itemsDimension": null
+			"itemsDimension": [ 60 ]
 		}
-	},
-	"measurementMethod": {
-		"software": {
-			"CodeCarbon": {
-				"solutionFamily": "library",
-				"solutionVersion": "2.3.2",
-				"measureUnit": "Wh",
-				"measureValue": 459	
-			},
-			"CarbonAI": {
-				"solutionVersion": null,
-				"measureUnit": null,
-				"measureValue": null	
-			},
-			"PyJoule": {}
-		},
-		"hardware": {
-			"PCE-PA6000": {
-				"instrumentFamily": "WattMeter",
-				"instrumentManufacturer": "PCE Instruments",
-				"eanCode": "4250348701152",
-				"measureUnit": "Wh",
-				"measureValue": null		
+	],
+	"measures": [
+		{
+			"$$key": "CarbonAI",
+			"version": "0.1",
+			"unit": "Wh",
+			"value": 351	
+		}
+	],
+	"task": {
+		"type": "machine-learning",
+		"algorithms": [
+			{
+				"$$key": "RandomForest"
 			}
-		}
+		]
 	},
-	"taskContext": {
-		"taskDomain": "machine-learning",
-		"taskSubDomain": "nlp",
-		"taskType": "preprocessing",
-		"taskSubtype": "vectorization",
-		"algorithms": { }
-	},
-	"systemContext": {
-		"os": "Linux",
-		"distribution": "RedHat",
-		"distributionVersion": "Enterprise Linux 9",
-		"kernelVersion": null
-	},
-	"softwareContext": {
+	"software": {
 		"language": "python",
-		"version": "3.8.0"
+		"version": "3.9.0"
 	},
-	"hardwareContext": {
-		"shared": true,
-		"cpu": {
+	"hardware": [
+		{
+			"$$key": "cpu",
 			"items": 1,
 			"manufacturer": "AMD",
 			"family": "Ryzen",
-			"series": "7000X3D",
-			"share": 0.2
+			"series": "7000X3D"
 		},
-		"gpu": {
-			"items": 4,
+		{
+			"$$key": "gpu",
+			"items": 2,
 			"manufacturer": "NVIDIA",
 			"family": "GeForce",
-			"series": "RTX 4090",
-			"share": 0.5
-		},
-		"motherboard": null,
-		"drive": null,
-		"fans": null,
-		"extra": null
-	},
+			"series": "RTX 4080"
+		}
+	],
 	"environment": {
-		"country": "France",
+		"country": "UK",
 		"latitude": null,
 		"longitude": null,
 		"location": null,
@@ -110,8 +71,9 @@
 		"powerSourceCarbonIntensityUnit": "gCO2eq/kWh",
 		"powerSourceCarbonIntensity": 85
 	},
-	"contentHash": {
-		"algorithm": "RSA",
-		"value": "7BBAD02FC4C657A2CC858CD4EA2EC751"
+	"$hash": {
+		"hashAlgorithm": "RIPEMD-160",
+		"cryptographicAlgorithm": "RSA",
+		"value": "AABAD02FC4C657A2CC858CD4EA2EC751"
 	}
 }

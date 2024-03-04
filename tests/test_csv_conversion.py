@@ -12,7 +12,7 @@ from services.object_flattener import ObjectFlattener
 
 class FlatteningAndConversionTest(unittest.TestCase):
 
-    # tests the flattening of a basic JSON object, with only nested dict
+    # tests the conversion to CSV of a JSON report
     def testFlattenSimpleObject(self):
         test = False
         try:
