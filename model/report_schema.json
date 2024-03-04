@@ -74,12 +74,24 @@
       "datasets": {
         "type": "array",
         "description": "the list of datasets processed by the computing task",
-        "items": {}
+        "items": {
+          "type":"object",
+          "minItems": 1,
+          "additionalProperties": {
+            "$ref": "https://github.com/Orange-OpenSource/ai-power-measures-sharing/model/report_schema.json"
+          }
+        }
       },
       "measures": {
         "type": "array",
         "description": "the software and/or hardware measures of the computing task",
-        "items": {}
+        "items": {
+          "type":"object",
+          "minItems": 1,
+          "additionalProperties": {
+            "$ref": "https://github.com/Orange-OpenSource/ai-power-measures-sharing/model/measure_schema.json"
+          }
+        }
       },
       "task": {
         "type": "object",
@@ -104,7 +116,12 @@
           "algorithms": {
             "type": "array",
             "description": "the main algorithmic approaches used by the computing task",
-            "items": {}
+            "items": {
+              "type":"object",
+              "additionalProperties": {
+                "$ref": "https://github.com/Orange-OpenSource/ai-power-measures-sharing/model/algorithm_schema.json"
+              }
+            }
           }
         },
         "required": [
@@ -156,7 +173,13 @@
           },
           "parts": {
             "type": "array",
-            "items": {}
+            "items": {
+              "type":"object",
+              "minItems": 1,
+              "additionalProperties": {
+                "$ref": "https://github.com/Orange-OpenSource/ai-power-measures-sharing/model/hardware_schema.json"
+              }
+            }
           }
         },
         "required": [

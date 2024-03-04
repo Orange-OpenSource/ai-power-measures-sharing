@@ -8,5 +8,9 @@
 
 #!/usr/bin/python
 
-import json
-import pandas as pd
+import unittest
+from tests.test_flattening import FlatteningTest
+from tests.test_csv_conversion import FlatteningAndConversionTest
+
+if __name__ == '__main__':
+    unittest.main()
